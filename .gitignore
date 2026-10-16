@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+
+# Build / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+*.whl
+*.tar.gz
+
+# AppImage build
+packaging/appimage/build/
+*.AppImage
+appimagetool*
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE
+.vscode/
+.idea/
+.spyproject/
+*.swp
+
+# Screenshots saved while testing
+neuroviewer_*.png
+.ruff_cache/

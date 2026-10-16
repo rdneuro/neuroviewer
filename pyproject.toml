@@ -1,0 +1,80 @@
+[build-system]
+requires = ["hatchling>=1.24"]
+build-backend = "hatchling.build"
+
+[project]
+name = "neuroviewer"
+dynamic = ["version"]
+description = "Freeview-like neuroimaging viewer in pure Python (PySide6 + vedo/VTK + nibabel)"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.9"
+authors = [{ name = "Rodrigo Debona", email = "r.debona@ufrj.br" }]
+keywords = [
+    "neuroimaging", "mri", "nifti", "freesurfer", "viewer", "vtk", "vedo",
+    "tractography", "brain", "medical-imaging",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: X11 Applications :: Qt",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Healthcare Industry",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Medical Science Apps.",
+    "Topic :: Scientific/Engineering :: Visualization",
+]
+dependencies = [
+    "numpy>=1.24",
+    "nibabel>=5.0",
+    "vtk>=9.2",
+    "vedo>=2024.5",
+    "PySide6-Essentials>=6.5",
+    "matplotlib>=3.7",
+]
+
+[project.optional-dependencies]
+open3d = ["open3d>=0.17"]
+test = ["pytest>=7"]
+dev = ["pytest>=7", "build>=1.0", "twine>=5", "ruff>=0.5"]
+
+[project.urls]
+Homepage = "https://github.com/rdneuro/neuroviewer"
+Repository = "https://github.com/rdneuro/neuroviewer"
+Issues = "https://github.com/rdneuro/neuroviewer/issues"
+Changelog = "https://github.com/rdneuro/neuroviewer/blob/main/CHANGELOG.md"
+
+[project.scripts]
+neuroviewer = "neuroviewer.cli:main"
+
+[tool.hatch.version]
+path = "src/neuroviewer/__init__.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/neuroviewer"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "src/neuroviewer",
+    "tests",
+    "packaging",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md",
+    "RELEASING.md",
+    "pyproject.toml",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py39"

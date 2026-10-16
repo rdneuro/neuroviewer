@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Neuroviewer
+GenericName=Neuroimaging Viewer
+Comment=Freeview-like viewer for NIfTI, MGZ, FreeSurfer surfaces and tractography
+Exec=neuroviewer %F
+Icon=neuroviewer
+Terminal=false
+Categories=Science;MedicalSoftware;Graphics;Viewer;
+Keywords=MRI;NIfTI;FreeSurfer;neuroimaging;brain;tractography;
+StartupWMClass=neuroviewer
