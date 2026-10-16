@@ -16,7 +16,7 @@ PySide6 interface, vedo/VTK rendering, nibabel reading. Native desktop app, no b
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT license"></a>
 </p>
 
-<p align="center"><img src="https://raw.githubusercontent.com/rdneuro/neuroviewer/main/docs/screenshot.png" width="900" alt="Neuroviewer"></p>
+<p align="center"><img src="docs/screenshot.png" width="900" alt="Neuroviewer"></p>
 -->
 
 ## Install
